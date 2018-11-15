@@ -203,19 +203,19 @@ void drawScene() {
     //Back (red color)
     float dimensions[3], center[3], colour[3];
     dimensions[0] = 4.0f; dimensions[1] = 10.0f; dimensions[2] = 0.3f;
-    center[0] = 0.0f; center[1] = 0.0f; center[2] = -7.0f;
-    colour[0] = 1.0f; colour[1] = colour[2] = 0.0f;
+    center[0] = 0.0f; center[1] = -8.0f; center[2] = -7.0f;
+    colour[1] = 1.0f; colour[0] = colour[2] = 0.0f;
     drawCube(dimensions, center, colour);
 
     //Front (green color)
     dimensions[0] = 4.0f; dimensions[1] = 5.0f; dimensions[2] = 0.3f;
-    center[0] = 0.0f; center[1] = -2.5f; center[2] = -3.0f;
+    center[0] = 0.0f; center[1] = -10.5f; center[2] = -11.0f;								//-3
     colour[1] = 1.0f; colour[0] = colour[2] = 0.0f;
     drawCube(dimensions, center, colour);
 
     //Seat (blue color)
     dimensions[0] = 4.0f; dimensions[1] = 0.3f; dimensions[2] = 4.3f;
-    center[0] = 0.0f; center[1] = 0.0f; center[2] = -5.0f;
+    center[0] = 0.0f; center[1] = -8.0f; center[2] = -9.0f;
     colour[2] = 1.0f; colour[0] = colour[1] = 0.0f;
     drawCube(dimensions, center, colour);  
 
@@ -223,23 +223,188 @@ void drawScene() {
 
     //Table sample start
     dimensions[0] = 12.0f; dimensions[1] = 0.3f; dimensions[2] = 8.6f;
-    center[0] = 0.0f; center[1] = 2.0f; center[2] = 0.0f;
-    colour[0] = 1.0f; colour[2] = colour[1] = 0.0f;
+    center[0] = 0.0f; center[1] = -6.0f; center[2] = -14.0f;
+    colour[0] = 0.0f; colour[1] = 0.89; colour[2] = 1.0f;
+    drawCube(dimensions, center, colour);  
+	
+    //Green
+    dimensions[0] = 0.3f; dimensions[1] = 7.0f; dimensions[2] = 8.6f;
+    center[0] = 6.0f; center[1] = -9.5f; center[2] = -14.0f;
+    colour[0] = 0.0f; colour[1] = 0.89; colour[2] = 1.0f;
+    drawCube(dimensions, center, colour); 
+
+    dimensions[0] = 0.3f; dimensions[1] = 7.0f; dimensions[2] = 8.6f;
+    center[0] = -6.0f; center[1] = -9.5f; center[2] = -14.0f;
+   colour[0] = 0.0f; colour[1] = 0.89; colour[2] = 1.0f;
+    drawCube(dimensions, center, colour); 
+
+    //BUG: flicker while rotating chair (probably due to changing views and decision of which surface to show) 
+ 
+ 	 //Back (red color)
+    //float dimensions[3], center[3], colour[3];
+    dimensions[0] = 4.0f; dimensions[1] = 10.0f; dimensions[2] = 0.3f;
+    center[0] = 16.0f; center[1] = -8.0f; center[2] = -7.0f;
+    colour[1] = 1.0f; colour[0] = colour[2] = 0.0f;
+    drawCube(dimensions, center, colour);
+
+    //Front (green color)
+    dimensions[0] = 4.0f; dimensions[1] = 5.0f; dimensions[2] = 0.3f;
+    center[0] = 16.0f; center[1] = -10.5f; center[2] = -11.0f;								//-3
+    colour[1] = 1.0f; colour[0] = colour[2] = 0.0f;
+    drawCube(dimensions, center, colour);
+
+    //Seat (blue color)
+    dimensions[0] = 4.0f; dimensions[1] = 0.3f; dimensions[2] = 4.3f;
+    center[0] = 16.0f; center[1] = -8.0f; center[2] = -9.0f;
+    colour[2] = 1.0f; colour[0] = colour[1] = 0.0f;
     drawCube(dimensions, center, colour);  
 
+    //Chair sample end
+
+    //Table sample start
+    dimensions[0] = 12.0f; dimensions[1] = 0.3f; dimensions[2] = 8.6f;
+    center[0] = 16.0f; center[1] = -6.0f; center[2] = -14.0f;
+    colour[0] = 0.0f; colour[1] = 0.89; colour[2] = 1.0f;
+    drawCube(dimensions, center, colour);  
+	
+    //Green
     dimensions[0] = 0.3f; dimensions[1] = 7.0f; dimensions[2] = 8.6f;
-    center[0] = 6.0f; center[1] = -1.5f; center[2] = 0.0f;
-    colour[1] = 1.0f; colour[2] = colour[0] = 0.0f;
+    center[0] = 22.0f; center[1] = -9.5f; center[2] = -14.0f;
+    colour[0] = 0.0f; colour[1] = 0.89; colour[2] = 1.0f;
     drawCube(dimensions, center, colour); 
 
     dimensions[0] = 0.3f; dimensions[1] = 7.0f; dimensions[2] = 8.6f;
-    center[0] = -6.0f; center[1] = -1.5f; center[2] = 0.0f;
-    colour[1] = 1.0f; colour[2] = colour[0] = 0.0f;
+    center[0] = 10.0f; center[1] = -9.5f; center[2] = -14.0f;
+   colour[0] = 0.0f; colour[1] = 0.89; colour[2] = 1.0f;
     drawCube(dimensions, center, colour); 
 
-    //BUG: flicker while rotating chair (probably due to changing views and decision of which surface to show)  
+
+		 //Back (red color)
+    //chair starts
+    //float dimensions[3], center[3], colour[3];
+    dimensions[0] = 4.0f; dimensions[1] = 10.0f; dimensions[2] = 0.3f;
+    center[0] = -16.0f; center[1] = -8.0f; center[2] = -7.0f;
+   colour[1] = 1.0f; colour[0] = colour[2] = 0.0f;
+    drawCube(dimensions, center, colour);
+
+    //Front (green color)
+    dimensions[0] = 4.0f; dimensions[1] = 5.0f; dimensions[2] = 0.3f;
+    center[0] = -16.0f; center[1] = -10.5f; center[2] = -11.0f;								//-3
+    colour[1] = 1.0f; colour[0] = colour[2] = 0.0f;
+    drawCube(dimensions, center, colour);
+
+    //Seat (blue color)
+    dimensions[0] = 4.0f; dimensions[1] = 0.3f; dimensions[2] = 4.3f;
+    center[0] = -16.0f; center[1] = -8.0f; center[2] = -9.0f;
+    colour[2] = 1.0f; colour[0] = colour[1] = 0.0f;
+    drawCube(dimensions, center, colour); 
+ 
+
+    //Chair sample end
+
+    //Table sample start
+    dimensions[0] = 12.0f; dimensions[1] = 0.3f; dimensions[2] = 8.6f;
+    center[0] = -16.0f; center[1] = -6.0f; center[2] = -14.0f;
+    colour[0] = 0.0f; colour[1] = 0.89; colour[2] = 1.0f;
+    drawCube(dimensions, center, colour);  
+	
+    //Green
+    dimensions[0] = 0.3f; dimensions[1] = 7.0f; dimensions[2] = 8.6f;
+    center[0] = -10.0f; center[1] = -9.5f; center[2] = -14.0f;
+    colour[0] = 0.0f; colour[1] = 0.89; colour[2] = 1.0f;
+    drawCube(dimensions, center, colour); 
+
+    dimensions[0] = 0.3f; dimensions[1] = 7.0f; dimensions[2] = 8.6f;
+    center[0] = -22.0f; center[1] = -9.5f; center[2] = -14.0f;
+    colour[0] = 0.0f; colour[1] = 0.89; colour[2] = 1.0f;
+    drawCube(dimensions, center, colour); 
+    //Table end 
+
+    //chair starts
+    dimensions[0] = 4.0f; dimensions[1] = 10.0f; dimensions[2] = 0.3f;
+    center[0] = 0.0f; center[1] = -8.0f; center[2] = -50.0f;
+    colour[1] = 1.0f; colour[0] = colour[2] = 0.0f;
+    drawCube(dimensions, center, colour);
+
+    //Front (green color)
+    dimensions[0] = 4.0f; dimensions[1] = 5.0f; dimensions[2] = 0.3f;
+    center[0] = 0.0f; center[1] = -10.5f; center[2] = -46.0f;								//-3
+    colour[1] = 1.0f; colour[0] = colour[2] = 0.0f;
+    drawCube(dimensions, center, colour);
+
+    //Seat (blue color)
+    dimensions[0] = 4.0f; dimensions[1] = 0.3f; dimensions[2] = 4.3f;
+    center[0] = 0.0f; center[1] = -8.0f; center[2] = -48.0f;
+    colour[2] = 1.0f; colour[0] = colour[1] = 0.0f;
+    drawCube(dimensions, center, colour); 
+ 
+
+    //Chair sample end
+
+    //Table sample start
+    dimensions[0] = 12.0f; dimensions[1] = 0.3f; dimensions[2] = 8.6f;
+    center[0] = 0.0f; center[1] = -6.0f; center[2] = -45.0f;
+    colour[0] = 0.0f; colour[1] = 0.89; colour[2] = 1.0f;
+    drawCube(dimensions, center, colour);  
+	
+    //Green
+    dimensions[0] = 0.3f; dimensions[1] = 7.0f; dimensions[2] = 8.6f;
+    center[0] = -6.0f; center[1] = -9.5f; center[2] = -45.0f;
+    colour[0] = 0.0f; colour[1] = 0.89; colour[2] = 1.0f;
+    drawCube(dimensions, center, colour); 
+
+    dimensions[0] = 0.3f; dimensions[1] = 7.0f; dimensions[2] = 8.6f;
+    center[0] = 6.0f; center[1] = -9.5f; center[2] = -45.0f;
+   colour[0] = 0.0f; colour[1] = 0.89; colour[2] = 1.0f;
+    drawCube(dimensions, center, colour); 
+    //Table end 
+
+    //board
+    
+    //Back (green color)
+   
+    dimensions[0] = 40.0f; dimensions[1] = 20.0f; dimensions[2] = 0.3f;
+    center[0] = 0.0f; center[1] = 5.0f; center[2] = -60.0f;
+    colour[0] = 0.2f; colour[1] = 0.41f; colour[2] = 0.2f;
+    drawCube(dimensions, center, colour);
+	
+    //colour[0] = 1.0f; colour[1] = colour[2] = 0.0f;
+    //glutSolidSphere(70,20,20)
+	//bottomleft
+    glColor3f(0.8, 0.2, 0.1); 
+    glTranslatef(-20.0,-5.0,-60.0);
+
+    glutSolidTorus(0.5,1,50,50);
+    //topleft
+    glColor3f(0.8, 0.2, 0.1); 
+    glTranslatef(0.0,20.0,0.0);
+
+    glutSolidTorus(0.5,1,50,50);
+	//topright
+    glColor3f(0.8, 0.2, 0.1); 
+    glTranslatef(40.0,0.0,0.0);
+
+    glutSolidTorus(0.5,1,50,50);
+    //bottomright
+
+    glColor3f(0.8, 0.2, 0.1); 
+    glTranslatef(0.0,-20.0,0.0);
+
+    glutSolidTorus(0.5,1,50,50);
+
+    glutSolidSphere(150,20,20);
+
+        // Flush buffers to screen
+	//Floor
+	dimensions[0] = 97.0f; dimensions[1] = 0.1f; dimensions[2] = 100.0f;
+	center[0] = -16.0f; center[1] = -8.0f; center[2] = 5.0f;
+	colour[0] = 0.3f; colour[1] = 0.3f; colour[2] = 0.3f;
+	drawCube(dimensions, center, colour);
+    
 
     glutSwapBuffers();
+
+
 }
 
 int main(int argc, char** argv) {
